@@ -1,5 +1,10 @@
 #!/bin/bash
-
+#Asking for initsetup.sh
+read -r -p "Do you want to run initial setup first? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+    bash initsetup.sh
+fi
 #Set Var
 user="$(whoami)"
 current_path=$(pwd)
