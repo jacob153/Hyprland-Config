@@ -1,2 +1,2 @@
 # Hyprland-Config
-modified
+
