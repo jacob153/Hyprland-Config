@@ -9,7 +9,7 @@ echo $hypr_config_location
 read -r -p "Do you want to run initial setup first? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-	bash inisetup.sh
+	bash initsetup.sh
 fi
 
 #Create Scripts Folder
