@@ -3,7 +3,8 @@
 #Set Var
 user="$(whoami)"
 current_path=$(pwd)
-
+hypr_config_location=$(/home/$user/.config/hypr)
+echo $hypr_config_location
 #Asking for initsetup.sh#
 read -r -p "Do you want to run initial setup first? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
