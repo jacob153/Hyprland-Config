@@ -4,7 +4,7 @@
 user="$(whoami)"
 current_path=$(pwd)
 hypr_config_location=$(/home/$user/.config/hypr)
-echo $hypr_config_location
+
 #Asking for initsetup.sh#
 read -r -p "Do you want to run initial setup first? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
@@ -13,13 +13,13 @@ then
 fi
 
 #Create Scripts Folder
-mkdir /home/$user/.config/hypr/scripts
+mkdir hypr_config_location/scripts
 
 #Removing original hyperland config and creating symlink to new
-rm /home/$user/.config/hypr/hyprland.conf
-ln -s $current_path/hypr/hyprland.conf /home/$user/.config/hypr/hyprland.conf
+rm hypr_config_location/hyprland.conf
+ln -s $current_path/hypr/hyprland.conf hypr_config_location/hyprland.conf
 
 #setting Wallpaper
-mkdir /home/$user/.config/hypr/wallpaper
-cp $current_path/wallpapers/evening-landscape.jpg /home/$user/.config/hypr/wallpaper
-ln -s $current_path/scripts/wallpaper.sh /home/$user/.config/hypr/scripts/wallpaper.sh
+mkdir $hypr_config_location/wallpaper
+cp $current_path/wallpapers/evening-landscape.jpg $hypr_config_location/wallpaper
+ln -s $current_path/scripts/wallpaper.sh hypr_config_location/scripts/wallpaper.sh
