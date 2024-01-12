@@ -36,6 +36,8 @@ echo "ipc = off" >> /home/$user/.config/hyprpaper.conf
 read -r -p "Is ly already enabled? [y/N] " response2
 if [[ "$response2" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
+    echo "Skipping enable daemon"
+else
 	sudo systemctl enable --now ly
 fi
 

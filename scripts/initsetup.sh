@@ -4,9 +4,9 @@
 read -r -p "Do you need hyperland and ly installed? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-	pkgs=(hyperland ly rsync waybar otf-font-awesome jsoncpp-doc hyprpaper)
+	pkgs=(hyprland polkit brightnessctl pavucontrol playerctl ly rsync waybar otf-font-awesome jsoncpp-doc hyprpaper)
 else
-    pkgs=(rsync waybar otf-font-awesome jsoncpp-doc hyprpaper)
+    pkgs=(rsync waybar otf-font-awesome jsoncpp-doc hyprpaper xdg-desktop-portal xdg-desktop-portal-hyprland)
 fi
 
 #Set Var
