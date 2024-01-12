@@ -1,9 +1,17 @@
 #!/bin/bash
 
+#Asking if hyperland is already installed before attempting configuration
+read -r -p "Do you need hyperland and ly installed? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+	pkgs=(hyperland ly rsync waybar otf-font-awesome jsoncpp-doc hyprpaper)
+else
+    pkgs=(rsync waybar otf-font-awesome jsoncpp-doc hyprpaper)
+fi
+
 #Set Var
 user="$(whoami)"
 current_path=$(pwd)
-pkgs=(rsync waybar otf-font-awesome jsoncpp-doc hyprpaper)
 
 #Create aur dir
 mkdir /home/$user/aur
