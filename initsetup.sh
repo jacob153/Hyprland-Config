@@ -3,7 +3,7 @@
 #Set Var
 user="$(whoami)"
 current_path=$(pwd)
-pkgs=(waybar otf-font-awesome jsoncpp-doc)
+pkgs=(waybar otf-font-awesome jsoncpp-doc hyprpaper)
 
 #Create aur dir
 mkdir /home/$user/aur
