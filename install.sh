@@ -20,7 +20,7 @@ rsync -av --progress $current_path/hypr /home/$user/.config --exclude hyprpaper.
 
 
 #wallpaper
-echo "preload = /home/$user/.config/hypr/wallpapers/1.jpg" >> hyprpaper.conf
+echo "preload = /home/$user/.config/hypr/wallpapers/1.jpg" >> /home/$user/.config/hypr/hyprpaper.conf
 echo "wallpaper on every monitor, trying set to:" $1
 IFS=$'\n'
 for l in $(hyprctl monitors | grep "Monitor")
@@ -28,8 +28,8 @@ do
     TMP=${l##*Monitor }
     TMP=${TMP%% (*}
     echo "set for" $TMP
-    echo "wallpaper = $TMP,/home/$user/.config/hypr/wallpapers/1.jpg" >> hyprpaper.conf
+    echo "wallpaper = $TMP,/home/$user/.config/hypr/wallpapers/1.jpg" >> /home/$user/.config/hypr/hyprpaper.conf
 done
-echo "splash = true" >> hyprpaper.conf
-echo "ipc = off" >> hyprpaper.conf
+echo "splash = true" >> /home/$user/.config/hyprpaper.conf
+echo "ipc = off" >> /home/$user/.config/hyprpaper.conf
 echo "done"
