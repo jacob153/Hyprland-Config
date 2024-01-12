@@ -27,3 +27,8 @@ makepkg -si --noconfirm
 
 #Installing Packages
 yay -S "${pkgs[@]}"  --noconfirm
+
+read -r -p "Do you want to install discord-screenaudio application? This will allow screensharing. [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+    yay -S discord-screenaudio
+then
