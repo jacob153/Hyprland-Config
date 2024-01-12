@@ -1,0 +1,24 @@
+#!/bin/bash
+current_path=$(pwd)
+cd /home/jahuffine/Hyprland-Config
+git pull
+rm -r /home/jahuffine/Hyprland-Config/hypr
+cp -r /home/jahuffine/.config/hypr /home/jahuffine/Hyprland-Config
+read -r -p "Do you want to commit and push to github? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+        git add -A
+	read -p "Enter Commit Message: " gitMessage
+	git commit -m "$gitMessage"
+	git push
+	
+fi
+
+cd $current_path
+
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+	echo "Completed and pushed to github"
+else
+	echo "Completed"
+fi
