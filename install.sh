@@ -10,6 +10,8 @@ read -r -p "Do you want to run initial setup first? If unsure, assume yes. [y/N]
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
 	bash scripts/initsetup.sh #running initial setup script
+else
+    sudo pacman -Syyu --noconfirm
 fi
 
 #remove default configs and copy in new
@@ -34,12 +36,12 @@ echo "ipc = off" >> /home/$user/.config/hyprpaper.conf
 
 #copy gtk theme by Fausto-Korpsvart
 echo "Copying gtk theme and applying"
-cp -r $current_path/gtk/gtk-2.0 /usr/share/themes/Gruvbox-Dark
-cp -r $current_path/gtk/gtk-3.0 /usr/share/themes/Gruvbox-Dark
-cp -r $current_path/gtk/gtk-4.0 /usr/share/themes/Gruvbox-Dark
-cp $current_path/gtk/index.theme /usr/share/themes/Gruvbox-Dark
+sudo cp -r $current_path/gtk/gtk-2.0 /usr/share/themes/Gruvbox-Dark
+sudo cp -r $current_path/gtk/gtk-3.0 /usr/share/themes/Gruvbox-Dark
+sudo cp -r $current_path/gtk/gtk-4.0 /usr/share/themes/Gruvbox-Dark
+sudo cp $current_path/gtk/index.theme /usr/share/themes/Gruvbox-Dark
 #applly gtk theme by 
-gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'
+sudo gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'
 
 #Copy and apply icons by jmattheis
 git clone https://github.com/jmattheis/gruvbox-dark-icons-gtk ~/.icons/gruvbox-dark-icons-gtk
