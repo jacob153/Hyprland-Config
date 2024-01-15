@@ -32,6 +32,19 @@ done
 echo "splash = true" >> /home/$user/.config/hyprpaper.conf
 echo "ipc = off" >> /home/$user/.config/hyprpaper.conf
 
+#copy gtk theme by Fausto-Korpsvart
+echo "Copying gtk theme and applying"
+cp -r $current_path/gtk/gtk-2.0 /usr/share/themes/Gruvbox-Dark
+cp -r $current_path/gtk/gtk-3.0 /usr/share/themes/Gruvbox-Dark
+cp -r $current_path/gtk/gtk-4.0 /usr/share/themes/Gruvbox-Dark
+cp $current_path/gtk/index.theme /usr/share/themes/Gruvbox-Dark
+#applly gtk theme by 
+gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'
+
+#Copy and apply icons by jmattheis
+git clone https://github.com/jmattheis/gruvbox-dark-icons-gtk ~/.icons/gruvbox-dark-icons-gtk
+gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
+
 #Enable LY
 read -r -p "Is ly already enabled? [y/N] " response2
 if [[ "$response2" =~ ^([yY][eE][sS]|[yY])$ ]]
