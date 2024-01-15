@@ -51,11 +51,11 @@ gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
 cp -r waybar /home/$user/.config
 
 #creating restart-hyprpaper command
-sudo cp $current_path/scripts/restart-hyprpaper /usr/bin
-sudo chmod +x /usr/bin/restart-hyprpaper
+sudo cp $current_path/scripts/rhp /usr/bin
+sudo chmod +x /usr/bin/rhp
 
 #restarting hyprpaper
-restart-hyprpaper
+rhp
 
 #Enable LY
 read -r -p "Is ly already enabled? [y/N] " response2
