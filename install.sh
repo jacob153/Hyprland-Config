@@ -41,7 +41,7 @@ sudo cp -r $current_path/gtk/gtk-3.0 /usr/share/themes/Gruvbox-Dark
 sudo cp -r $current_path/gtk/gtk-4.0 /usr/share/themes/Gruvbox-Dark
 sudo cp $current_path/gtk/index.theme /usr/share/themes/Gruvbox-Dark
 #applly gtk theme by 
-sudo gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'
 
 #Copy and apply icons by jmattheis
 git clone https://github.com/jmattheis/gruvbox-dark-icons-gtk ~/.icons/gruvbox-dark-icons-gtk
@@ -49,6 +49,13 @@ gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
 
 #Copy waybar theme
 cp -r waybar /home/$user/.config
+
+#creating restart-hyprpaper command
+cp $current_path/scripts/reatart-hyprpaper /usr/bin
+sudo chmod +x /usr/bin/restart-hyprpaper
+
+#restarting hyprpaper
+restart-hyprpaper
 
 #Enable LY
 read -r -p "Is ly already enabled? [y/N] " response2
