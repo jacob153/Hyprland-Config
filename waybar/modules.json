@@ -55,15 +55,6 @@
         },
         "separate-outputs": true
     },
-
-    // Youtube Subscriber Count
-    "custom/youtube": {
-        "format": " {}",
-        "exec": "python ~/private/youtube.py",
-        "restart-interval": 600,
-        "on-click": "chromium https://studio.youtube.com",
-        "tooltip": false
-    },
     
     // Cliphist
     "custom/cliphist": {
@@ -83,12 +74,6 @@
         "exec": "~/dotfiles/scripts/updates.sh",
         "restart-interval": 60,
         "on-click": "alacritty -e ~/dotfiles/scripts/installupdates.sh",
-        "tooltip": false
-    },
-
-    // Wallpaper
-    "custom/starter": {
-        "format": "THEME STARTER",
         "tooltip": false
     },
     

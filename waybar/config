@@ -13,20 +13,21 @@
 
     // Position TOP
     "layer": "top",
-    "margin-bottom": 0,
+    "margin-top": 5,
+    "margin-bottom": 5,
 
     // Position BOTTOM
     // "position": "bottom",
-    // "margin-top": 0,
-    // "margin-bottom": 14,
+    //"margin-top": 0,
+    //"margin-bottom": 14,
     
     "layer": "top",
-    "margin-left": 0,
-    "margin-right": 0,    
+    "margin-left": 5,
+    "margin-right": 5,    
     "spacing": 0,
 
     // Load Modules
-    "include": ["~/dotfiles/waybar/themes/starter/modules.json"],
+    "include": ["~/.config/waybar/modules.json"],
 
     // Modules Left
     "modules-left": [
@@ -37,7 +38,6 @@
         // "wlr/taskbar",
         "group/quicklinks",
         "hyprland/window",
-        "custom/starter"
     ],
 
     // Modules Center

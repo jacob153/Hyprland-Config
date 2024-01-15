@@ -14,15 +14,15 @@
  * Import Pywal colors 
  * ----------------------------------------------------- */
 /* @import 'style-light.css'; */
-@define-color backgroundlight #FFFFFF;
-@define-color backgrounddark #FFFFFF;
-@define-color workspacesbackground1 #FFFFFF;
+@define-color backgroundlight #E7D7AD;
+@define-color backgrounddark #E7D7AD;
+@define-color workspacesbackground1 #E7D7AD;
 @define-color workspacesbackground2 #CCCCCC;
-@define-color bordercolor #FFFFFF;
+@define-color bordercolor #E7D7AD;
 @define-color textcolor1 #000000;
 @define-color textcolor2 #000000;
-@define-color textcolor3 #FFFFFF;
-@define-color iconcolor #FFFFFF;
+@define-color textcolor3 #E7D7AD;
+@define-color iconcolor #E7D7AD;
 
 /* -----------------------------------------------------
  * General 
@@ -31,7 +31,7 @@
 * {
     font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     border: none;
-    border-radius: 0px;
+    border-radius: 25px;
 }
 
 window#waybar {
@@ -40,6 +40,9 @@ window#waybar {
     /* color: #FFFFFF; */
     transition-property: background-color;
     transition-duration: .5s;
+    border-color: #E7D7AD;
+    border-style: solid;
+    border-width: 2px;
 }
 
 /* -----------------------------------------------------
@@ -224,19 +227,6 @@ window#waybar.empty #window {
 #custom-updates.red {
     background-color: #dc2f2f;
     color: #FFFFFF;
-}
-
-/* -----------------------------------------------------
- * Custom Youtube
- * ----------------------------------------------------- */
-
-#custom-youtube {
-    background-color: @backgroundlight;
-    font-size: 16px;
-    color: @textcolor2;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 10px 15px 10px 0px;
 }
 
 /* -----------------------------------------------------
