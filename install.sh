@@ -51,7 +51,7 @@ gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
 cp -r waybar /home/$user/.config
 
 #creating restart-hyprpaper command
-sudo cp $current_path/scripts/reatart-hyprpaper /usr/bin
+sudo cp $current_path/scripts/restart-hyprpaper /usr/bin
 sudo chmod +x /usr/bin/restart-hyprpaper
 
 #restarting hyprpaper
