@@ -45,6 +45,9 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Dark'
 git clone https://github.com/jmattheis/gruvbox-dark-icons-gtk ~/.icons/gruvbox-dark-icons-gtk
 gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
 
+#Copy waybar theme
+cp -r waybar /home/$user/.config
+
 #Enable LY
 read -r -p "Is ly already enabled? [y/N] " response2
 if [[ "$response2" =~ ^([yY][eE][sS]|[yY])$ ]]
