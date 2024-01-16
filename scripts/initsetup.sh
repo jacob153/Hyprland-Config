@@ -34,7 +34,8 @@ makepkg -si --noconfirm
 if [[ "$response2" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
     ysy -S bluez --noconfirm
-    sudo systemctl enable --now bluetooth
+    sudo systemctl enable bluetooth
+    sudo systemctl start bluetooth
 fi
 yay -S "${pkgs[@]}"  --noconfirm
 
