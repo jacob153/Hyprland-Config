@@ -15,6 +15,20 @@ This is currently for my personal setup and is not ready for the public. Running
 - Some of the waybar buttons are not working
 	- yeah, I'm still working on it give me some time and I'm sure I'll have something figured out
 
+
+## Keybindings
+
+Mod key = win
+
+- close active window
+	- Mod + Q
+- open new terminal window
+	- Mod + Enter/Return
+- open rofi search
+	- Mod + R
+- Reload waybar
+	- Mod + B
+
 ## Projects used
 
 Note: There are parts and pieces from these other projects used to make mine
