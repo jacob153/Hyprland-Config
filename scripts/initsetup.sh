@@ -6,9 +6,9 @@ read -r -p "Is this a laptop with bluetooth? [y/N] " response2
 read -r -p "Do you want to install discord-screenaudio application? This will allow screensharing. [y/N] " response3
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-	pkgs=(hyprland polkit nano kitty rofi thunar nwg-dock-hyprland-bin brightnessctl pavucontrol playerctl ly rsync waybar wlogout otf-font-awesome jsoncpp-doc hyprpaper xdg-desktop-portal xdg-desktop-portal-hyprland pipewire wireplumber xwaylandvideobridge-bin cliphist librewolf-bin)
+	pkgs=(hyprland polkit nano kitty rofi thunar brightnessctl pavucontrol playerctl ly rsync waybar wlogout otf-font-awesome jsoncpp-doc hyprpaper xdg-desktop-portal xdg-desktop-portal-hyprland pipewire wireplumber xwaylandvideobridge-bin cliphist librewolf-bin)
 else
-    pkgs=(rsync waybar wlogout nano kitty rofi thunar nwg-dock-hyprland-bin otf-font-awesome jsoncpp-doc hyprpaper xdg-desktop-portal xdg-desktop-portal-hyprland pipewire wireplumber xwaylandvideobridge-bin brightnessctl pavucontrol playerctl cliphist librewolf-bin)
+    pkgs=(rsync waybar wlogout nano kitty rofi thunar otf-font-awesome jsoncpp-doc hyprpaper xdg-desktop-portal xdg-desktop-portal-hyprland pipewire wireplumber xwaylandvideobridge-bin brightnessctl pavucontrol playerctl cliphist librewolf-bin)
 fi
 
 #Set Var
