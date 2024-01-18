@@ -16,7 +16,7 @@ This is currently for my personal setup and is not ready for the public. Running
 	- yeah, I'm still working on it give me some time and I'm sure I'll have something figured out
 
 
-## Keybindings
+## Key bindings
 
 Mod key = win
 
